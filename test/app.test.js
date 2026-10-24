@@ -9,7 +9,7 @@ test('GET /health returns ok', async () => {
 
   const res = await fetch(`http://127.0.0.1:${port}/health`);
   assert.strictEqual(res.status, 200);
-  assert.deepStrictEqual(await res.json(), { status: 'fail' });
+  assert.deepStrictEqual(await res.json(), { status: 'ok' });
 
   server.close();
 });
